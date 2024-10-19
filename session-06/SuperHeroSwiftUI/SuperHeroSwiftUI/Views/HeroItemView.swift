@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HeroItemView: View {
     var hero: Hero
+    @State var isFavorite: Bool = false
     
     var body: some View {
         HStack {
@@ -17,7 +18,7 @@ struct HeroItemView: View {
                     .aspectRatio(contentMode: .fill)
                     .frame(width:96, height: 96)
                     .clipped()
-
+                
             }, placeholder: {ProgressView()})
             
             VStack(alignment: .leading){
@@ -26,13 +27,21 @@ struct HeroItemView: View {
                 
             }
             Spacer()
-            Button(action: {}){
-                Image(systemName: "heart")
+            Button(action: {
+                isFavorite.toggle()
+            }){
+                
+                Image(systemName: isFavorite ? "heart.fill" :"heart" )
+                    .resizable().frame(width: 32, height: 32)
+                
             }
+           
+            
         }
     }
+    
 }
 
 #Preview {
-    HeroItemView(hero: Hero(id: "69", name: "Batman", fullName: "Terry McGinnis", url: "https://www.superherodb.com/pictures2/portraits/10/100/10441.jpg"))
+    HeroItemView(hero: Hero(id: "69", name: "Batman", fullName: "Terry McGinnis", url: "https://www.superherodb.com/pictures2/portraits/10/100/10441.jpg", publisher: "Marvel", placeOfBirth: "New York", intelligence: 50, strength: 70, speed: 80, durability: 89, power: 89, combat: 85))
 }

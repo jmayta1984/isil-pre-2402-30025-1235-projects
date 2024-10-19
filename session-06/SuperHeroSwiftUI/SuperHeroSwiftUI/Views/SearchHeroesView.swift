@@ -9,23 +9,33 @@ import SwiftUI
 
 struct SearchHeroesView: View {
     
-    @State var name: String = ""
+    @State var name: String = "batman"
     
     @State var heroes: [Hero] = []
-        
+    
+    func loadData()  {
+        HeroService().getHeroesByName(name: name) { heroes in
+            self.heroes = heroes
+        }
+    }
     var body: some View {
-        VStack {
-            TextField("Search hero", text: $name).padding().textFieldStyle(.roundedBorder)
-            Button(action: {
-                HeroService().getHeroesByName(name: name) { heroes in
-                    self.heroes = heroes
+        NavigationStack {
+            VStack {
+                TextField("Search hero", text: $name).padding().textFieldStyle(.roundedBorder)
+                Button(action: {
+                    loadData()
+                }){
+                    Text("Search")
                 }
-            }){
-                Text("Search")
+                List {
+                    ForEach(heroes) { hero in
+                        HeroItemView(hero: hero)
+                    }
+                }
             }
-            List(heroes) { hero in
-                HeroItemView(hero: hero)
-            }
+        }
+        .onAppear{
+            loadData()
         }
     }
 }
