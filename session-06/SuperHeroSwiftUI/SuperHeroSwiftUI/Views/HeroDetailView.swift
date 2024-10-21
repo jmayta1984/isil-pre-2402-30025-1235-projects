@@ -4,7 +4,6 @@
 //
 //  Created by user259661 on 10/18/24.
 //
-
 import SwiftUI
 
 struct HeroDetailView: View {
@@ -15,51 +14,82 @@ struct HeroDetailView: View {
     var body: some View {
         ScrollView {
             VStack {
+                // Imagen del héroe
                 AsyncImage(url: URL(string: hero.url), content: { image in
                     image.resizable()
                         .aspectRatio(contentMode: .fill)
-                        .frame(width:width, height: height*0.4)
+                        .frame(width: width, height: height * 0.4)
+                        .cornerRadius(16)
+                        .padding(.top, 16)
+                        .padding(.leading, 16)
+                        .padding(.trailing, 16)
                         .clipped()
-                    
-                }, placeholder: {ProgressView()})
-                ZStack(alignment: .leading) {
-                    RoundedRectangle(cornerRadius:16).fill(.quinary)
+                }, placeholder: {
+                    ProgressView().frame(width: width, height: height * 0.4)
+                })
+                
+                // Información del héroe
+                HStack {
                     VStack(alignment: .leading) {
-                        Text(hero.name).bold().font(.title).padding(8)
-                        Text("Full name: \(hero.fullName)").padding(EdgeInsets(top: 0, leading: 8, bottom: 8, trailing: 8))
-                        Text("Place of birth: \(hero.placeOfBirth)").padding(EdgeInsets(top: 0, leading: 8, bottom: 8, trailing: 8))
-                        Text("Publisher: \(hero.publisher)").padding(EdgeInsets(top: 0, leading: 8, bottom: 8, trailing: 8))
-                        
+                        Text(hero.name)
+                            .bold()
+                            .font(.title)
+                            .foregroundColor(.white)
+                            .padding(8)
+                        Text("Full name: \(hero.fullName)")
+                            .foregroundColor(.white)
+                            .padding(EdgeInsets(top: 0, leading: 8, bottom: 8, trailing: 8))
+                        Text("Place of birth: \(hero.placeOfBirth)")
+                            .foregroundColor(.white)
+                            .padding(EdgeInsets(top: 0, leading: 8, bottom: 8, trailing: 8))
+                        Text("Publisher: \(hero.publisher)")
+                            .foregroundColor(.white)
+                            .padding(EdgeInsets(top: 0, leading: 8, bottom: 8, trailing: 8))
                     }
+                    .padding(8)
+                    Spacer()
+                }
+                
+                // Powerstats
+                VStack(alignment: .leading) {
+                    Text("Powerstats")
+                        .bold()
+                        .font(.title)
+                        .foregroundColor(.white)
+                        .padding(8)
                     
-                }.fixedSize(horizontal: false, vertical: true).padding(8)
-                ZStack(alignment: .leading){
-                    RoundedRectangle(cornerRadius:16).fill(.quinary)
-                    VStack(alignment: .leading) {
-                        Text("Powerstats").bold().font(.title).padding(8)
-                        HStack  {
-                            Text("Intelligence").padding(EdgeInsets(top: 0, leading: 8, bottom: 8, trailing: 0))
-                            Spacer()
-                            Slider(value: Binding(get: {return Double(hero.intelligence)}, set: { _ in }), in: 0...100).disabled(false).padding(EdgeInsets(top: 0, leading: 8, bottom: 8, trailing: 8)).frame(width: width*0.65)
-                        }
-                        HStack  {
-                            Text("Strength").padding(EdgeInsets(top: 0, leading: 8, bottom: 8, trailing: 0))
-                            Spacer()
-                            Slider(value: Binding(get: {return Double(hero.strength)}, set: { _ in }), in: 0...100).disabled(false).padding(EdgeInsets(top: 0, leading: 8, bottom: 8, trailing: 8)).frame(width: width*0.65)
-                        }
-                        HStack  {
-                            Text("Speed").padding(EdgeInsets(top: 0, leading: 8, bottom: 8, trailing: 0))
-                            Spacer()
-                            Slider(value: Binding(get: {return Double(hero.speed)}, set: { _ in }), in: 0...100).disabled(false).padding(EdgeInsets(top: 0, leading: 8, bottom: 8, trailing: 8)).frame(width: width*0.65)
-                        }
-                                   
+                    PowerstatView(statName: "Intelligence", statValue: Double(hero.intelligence), width: width)
+                    PowerstatView(statName: "Strength", statValue: Double(hero.strength), width: width)
+                    PowerstatView(statName: "Speed", statValue: Double(hero.speed), width: width)
+                    PowerstatView(statName: "Durability", statValue: Double(hero.durability), width: width)
+                    PowerstatView(statName: "Power", statValue: Double(hero.power), width: width)
+                    PowerstatView(statName: "Combat", statValue: Double(hero.combat), width: width)
                     
-                        
-                    }
-                    
-                }.fixedSize(horizontal: false, vertical: true).padding(8)
-                Spacer()
+                }
+                .padding(8)
             }
+        }
+        .background(Color.black) // Fondo negro para todo el ScrollView
+        .toolbarBackground(Color.black, for: .navigationBar)
+        // Fondo negro para la barra de navegación
+    }
+}
+
+struct PowerstatView: View {
+    let statName: String
+    let statValue: Double
+    let width: CGFloat
+    
+    var body: some View {
+        HStack {
+            Text(statName)
+                .foregroundColor(.white)
+                .padding(EdgeInsets(top: 0, leading: 8, bottom: 8, trailing: 0))
+            Spacer()
+            Slider(value: Binding(get: { return statValue }, set: { _ in }), in: 0...100)
+                .disabled(true)
+                .padding(EdgeInsets(top: 0, leading: 8, bottom: 8, trailing: 8))
+                .frame(width: width * 0.65)
         }
     }
 }

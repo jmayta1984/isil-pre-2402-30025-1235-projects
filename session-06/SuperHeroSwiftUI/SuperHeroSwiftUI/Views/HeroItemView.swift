@@ -12,18 +12,20 @@ struct HeroItemView: View {
     @State var isFavorite: Bool = false
     
     var body: some View {
+        
         HStack {
             AsyncImage(url: URL(string: hero.url), content: { image in
                 image.resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(width:96, height: 96)
+                    .frame(width:64, height: 64)
+                    .cornerRadius(8)
                     .clipped()
                 
-            }, placeholder: {ProgressView()})
+            }, placeholder: { ProgressView().frame(width:64, height: 64)})
             
             VStack(alignment: .leading){
-                Text(hero.name)
-                Text(hero.fullName)
+                Text(hero.name).foregroundStyle(.white).font(.title3).bold()
+                Text(hero.fullName).foregroundStyle(.white)
                 
             }
             Spacer()
@@ -31,14 +33,16 @@ struct HeroItemView: View {
                 isFavorite.toggle()
             }){
                 
-                Image(systemName: isFavorite ? "heart.fill" :"heart" )
-                    .resizable().frame(width: 32, height: 32)
+                Image(systemName: isFavorite ? "heart.fill" :"heart" ).foregroundColor(.white)
                 
-            }
-           
+            }.buttonStyle(BorderlessButtonStyle())
             
-        }
+            
+        }.padding(.vertical,4).background(Color.black) // Fondo negro para cada celda
+            
     }
+    
+    
     
 }
 

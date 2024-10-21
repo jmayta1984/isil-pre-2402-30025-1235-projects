@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SearchHeroesView: View {
     
-    @State var name: String = "batman"
+    @State var name: String = ""
     
     @State var heroes: [Hero] = []
     
@@ -20,22 +20,26 @@ struct SearchHeroesView: View {
     }
     var body: some View {
         NavigationStack {
-            VStack {
-                TextField("Search hero", text: $name).padding().textFieldStyle(.roundedBorder)
-                Button(action: {
-                    loadData()
-                }){
-                    Text("Search")
-                }
-                List {
-                    ForEach(heroes) { hero in
-                        HeroItemView(hero: hero)
+            ZStack {
+                Color.black.ignoresSafeArea()
+                   
+                VStack (spacing: 0) {
+                    TextField("Search hero", text: $name).padding().textFieldStyle(.roundedBorder).onSubmit {
+                        loadData()
                     }
+                    
+                    List {
+                        ForEach(heroes) { hero in
+                            NavigationLink(destination: {HeroDetailView(hero: hero)}) {
+                                HeroItemView(hero: hero)
+                            }
+                            
+                        }.listRowBackground(Color.black)
+                    }.listStyle(PlainListStyle())
+                    
+                    
                 }
             }
-        }
-        .onAppear{
-            loadData()
         }
     }
 }
