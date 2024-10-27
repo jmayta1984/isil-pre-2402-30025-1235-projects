@@ -10,8 +10,8 @@ import Foundation
 class NewsService {
     
     func getNews(query: String, completion: @escaping ([News]?, String? ) -> Void) {
-        
-        let url = "https://newsapi.org/v2/everything?q=\(query)&apiKey=0ded32e65558448784fccdbc73039b0d"
+        let apiKey = "Your apikey here"
+        let url = "https://newsapi.org/v2/everything?q=\(query)&apiKey=\(apiKey)"
         
         HttpRequestHelper().GET(url: url) { success, data, message in
             if (success) {
