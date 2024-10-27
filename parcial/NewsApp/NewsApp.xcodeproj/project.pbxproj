@@ -7,32 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C0A6D292CCC73EC00E4BF49 /* HttpRequestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0A6D282CCC73EC00E4BF49 /* HttpRequestHelper.swift */; };
-		1C8E9AB62CC33C4800B45410 /* HeroDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8E9AB52CC33C4800B45410 /* HeroDetailView.swift */; };
-		1CD286F32CBA12CB0048951C /* SuperHeroSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD286F22CBA12CB0048951C /* SuperHeroSwiftUIApp.swift */; };
-		1CD286F72CBA12CC0048951C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CD286F62CBA12CC0048951C /* Assets.xcassets */; };
-		1CD286FA2CBA12CC0048951C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CD286F92CBA12CC0048951C /* Preview Assets.xcassets */; };
-		1CD287062CBA14750048951C /* SearchHeroesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD287052CBA14750048951C /* SearchHeroesView.swift */; };
-		1CD287082CBA160E0048951C /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD287072CBA160E0048951C /* Hero.swift */; };
-		1CD2870A2CBA1C560048951C /* HeroItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD287092CBA1C560048951C /* HeroItemView.swift */; };
-		1CD2870E2CBA25CD0048951C /* HeroService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD2870D2CBA25CD0048951C /* HeroService.swift */; };
+		1C1212632CCE148200429EAA /* NewsAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1212622CCE148200429EAA /* NewsAppApp.swift */; };
+		1C1212652CCE148200429EAA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1212642CCE148200429EAA /* ContentView.swift */; };
+		1C1212672CCE148400429EAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C1212662CCE148400429EAA /* Assets.xcassets */; };
+		1C12126A2CCE148400429EAA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C1212692CCE148400429EAA /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1C0A6D282CCC73EC00E4BF49 /* HttpRequestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequestHelper.swift; sourceTree = "<group>"; };
-		1C8E9AB52CC33C4800B45410 /* HeroDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailView.swift; sourceTree = "<group>"; };
-		1CD286EF2CBA12CB0048951C /* SuperHeroSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperHeroSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1CD286F22CBA12CB0048951C /* SuperHeroSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroSwiftUIApp.swift; sourceTree = "<group>"; };
-		1CD286F62CBA12CC0048951C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1CD286F92CBA12CC0048951C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		1CD287052CBA14750048951C /* SearchHeroesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHeroesView.swift; sourceTree = "<group>"; };
-		1CD287072CBA160E0048951C /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
-		1CD287092CBA1C560048951C /* HeroItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroItemView.swift; sourceTree = "<group>"; };
-		1CD2870D2CBA25CD0048951C /* HeroService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroService.swift; sourceTree = "<group>"; };
+		1C12125F2CCE148200429EAA /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C1212622CCE148200429EAA /* NewsAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAppApp.swift; sourceTree = "<group>"; };
+		1C1212642CCE148200429EAA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1C1212662CCE148400429EAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1C1212692CCE148400429EAA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1CD286EC2CBA12CB0048951C /* Frameworks */ = {
+		1C12125C2CCE148200429EAA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,122 +32,77 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1CD286E62CBA12CB0048951C = {
+		1C1212562CCE148200429EAA = {
 			isa = PBXGroup;
 			children = (
-				1CD286F12CBA12CB0048951C /* SuperHeroSwiftUI */,
-				1CD286F02CBA12CB0048951C /* Products */,
+				1C1212612CCE148200429EAA /* NewsApp */,
+				1C1212602CCE148200429EAA /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		1CD286F02CBA12CB0048951C /* Products */ = {
+		1C1212602CCE148200429EAA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1CD286EF2CBA12CB0048951C /* SuperHeroSwiftUI.app */,
+				1C12125F2CCE148200429EAA /* NewsApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1CD286F12CBA12CB0048951C /* SuperHeroSwiftUI */ = {
+		1C1212612CCE148200429EAA /* NewsApp */ = {
 			isa = PBXGroup;
 			children = (
-				1CD287042CBA13950048951C /* Helpers */,
-				1CD287032CBA13820048951C /* Services */,
-				1CD287022CBA136D0048951C /* ViewModels */,
-				1CD287012CBA135E0048951C /* Models */,
-				1CD287002CBA13510048951C /* Views */,
-				1CD286F22CBA12CB0048951C /* SuperHeroSwiftUIApp.swift */,
-				1CD286F62CBA12CC0048951C /* Assets.xcassets */,
-				1CD286F82CBA12CC0048951C /* Preview Content */,
+				1C1212622CCE148200429EAA /* NewsAppApp.swift */,
+				1C1212642CCE148200429EAA /* ContentView.swift */,
+				1C1212662CCE148400429EAA /* Assets.xcassets */,
+				1C1212682CCE148400429EAA /* Preview Content */,
 			);
-			path = SuperHeroSwiftUI;
+			path = NewsApp;
 			sourceTree = "<group>";
 		};
-		1CD286F82CBA12CC0048951C /* Preview Content */ = {
+		1C1212682CCE148400429EAA /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				1CD286F92CBA12CC0048951C /* Preview Assets.xcassets */,
+				1C1212692CCE148400429EAA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		1CD287002CBA13510048951C /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				1CD287052CBA14750048951C /* SearchHeroesView.swift */,
-				1CD287092CBA1C560048951C /* HeroItemView.swift */,
-				1C8E9AB52CC33C4800B45410 /* HeroDetailView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		1CD287012CBA135E0048951C /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				1CD287072CBA160E0048951C /* Hero.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		1CD287022CBA136D0048951C /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		1CD287032CBA13820048951C /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				1CD2870D2CBA25CD0048951C /* HeroService.swift */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		1CD287042CBA13950048951C /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				1C0A6D282CCC73EC00E4BF49 /* HttpRequestHelper.swift */,
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1CD286EE2CBA12CB0048951C /* SuperHeroSwiftUI */ = {
+		1C12125E2CCE148200429EAA /* NewsApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1CD286FD2CBA12CC0048951C /* Build configuration list for PBXNativeTarget "SuperHeroSwiftUI" */;
+			buildConfigurationList = 1C12126D2CCE148400429EAA /* Build configuration list for PBXNativeTarget "NewsApp" */;
 			buildPhases = (
-				1CD286EB2CBA12CB0048951C /* Sources */,
-				1CD286EC2CBA12CB0048951C /* Frameworks */,
-				1CD286ED2CBA12CB0048951C /* Resources */,
+				1C12125B2CCE148200429EAA /* Sources */,
+				1C12125C2CCE148200429EAA /* Frameworks */,
+				1C12125D2CCE148200429EAA /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SuperHeroSwiftUI;
-			productName = SuperHeroSwiftUI;
-			productReference = 1CD286EF2CBA12CB0048951C /* SuperHeroSwiftUI.app */;
+			name = NewsApp;
+			productName = NewsApp;
+			productReference = 1C12125F2CCE148200429EAA /* NewsApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		1CD286E72CBA12CB0048951C /* Project object */ = {
+		1C1212572CCE148200429EAA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
-					1CD286EE2CBA12CB0048951C = {
+					1C12125E2CCE148200429EAA = {
 						CreatedOnToolsVersion = 15.2;
 					};
 				};
 			};
-			buildConfigurationList = 1CD286EA2CBA12CB0048951C /* Build configuration list for PBXProject "SuperHeroSwiftUI" */;
+			buildConfigurationList = 1C12125A2CCE148200429EAA /* Build configuration list for PBXProject "NewsApp" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -165,47 +110,42 @@
 				en,
 				Base,
 			);
-			mainGroup = 1CD286E62CBA12CB0048951C;
-			productRefGroup = 1CD286F02CBA12CB0048951C /* Products */;
+			mainGroup = 1C1212562CCE148200429EAA;
+			productRefGroup = 1C1212602CCE148200429EAA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1CD286EE2CBA12CB0048951C /* SuperHeroSwiftUI */,
+				1C12125E2CCE148200429EAA /* NewsApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1CD286ED2CBA12CB0048951C /* Resources */ = {
+		1C12125D2CCE148200429EAA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CD286FA2CBA12CC0048951C /* Preview Assets.xcassets in Resources */,
-				1CD286F72CBA12CC0048951C /* Assets.xcassets in Resources */,
+				1C12126A2CCE148400429EAA /* Preview Assets.xcassets in Resources */,
+				1C1212672CCE148400429EAA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1CD286EB2CBA12CB0048951C /* Sources */ = {
+		1C12125B2CCE148200429EAA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CD2870E2CBA25CD0048951C /* HeroService.swift in Sources */,
-				1C8E9AB62CC33C4800B45410 /* HeroDetailView.swift in Sources */,
-				1CD287062CBA14750048951C /* SearchHeroesView.swift in Sources */,
-				1CD2870A2CBA1C560048951C /* HeroItemView.swift in Sources */,
-				1CD286F32CBA12CB0048951C /* SuperHeroSwiftUIApp.swift in Sources */,
-				1C0A6D292CCC73EC00E4BF49 /* HttpRequestHelper.swift in Sources */,
-				1CD287082CBA160E0048951C /* Hero.swift in Sources */,
+				1C1212652CCE148200429EAA /* ContentView.swift in Sources */,
+				1C1212632CCE148200429EAA /* NewsAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		1CD286FB2CBA12CC0048951C /* Debug */ = {
+		1C12126B2CCE148400429EAA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -268,7 +208,7 @@
 			};
 			name = Debug;
 		};
-		1CD286FC2CBA12CC0048951C /* Release */ = {
+		1C12126C2CCE148400429EAA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -324,14 +264,14 @@
 			};
 			name = Release;
 		};
-		1CD286FE2CBA12CC0048951C /* Debug */ = {
+		1C12126E2CCE148400429EAA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SuperHeroSwiftUI/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"NewsApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -344,7 +284,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = pe.isil.SuperHeroSwiftUI;
+				PRODUCT_BUNDLE_IDENTIFIER = pe.isil.NewsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -352,14 +292,14 @@
 			};
 			name = Debug;
 		};
-		1CD286FF2CBA12CC0048951C /* Release */ = {
+		1C12126F2CCE148400429EAA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SuperHeroSwiftUI/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"NewsApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -372,7 +312,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = pe.isil.SuperHeroSwiftUI;
+				PRODUCT_BUNDLE_IDENTIFIER = pe.isil.NewsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -383,25 +323,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1CD286EA2CBA12CB0048951C /* Build configuration list for PBXProject "SuperHeroSwiftUI" */ = {
+		1C12125A2CCE148200429EAA /* Build configuration list for PBXProject "NewsApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1CD286FB2CBA12CC0048951C /* Debug */,
-				1CD286FC2CBA12CC0048951C /* Release */,
+				1C12126B2CCE148400429EAA /* Debug */,
+				1C12126C2CCE148400429EAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1CD286FD2CBA12CC0048951C /* Build configuration list for PBXNativeTarget "SuperHeroSwiftUI" */ = {
+		1C12126D2CCE148400429EAA /* Build configuration list for PBXNativeTarget "NewsApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1CD286FE2CBA12CC0048951C /* Debug */,
-				1CD286FF2CBA12CC0048951C /* Release */,
+				1C12126E2CCE148400429EAA /* Debug */,
+				1C12126F2CCE148400429EAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 1CD286E72CBA12CB0048951C /* Project object */;
+	rootObject = 1C1212572CCE148200429EAA /* Project object */;
 }
