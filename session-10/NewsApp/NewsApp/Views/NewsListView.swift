@@ -33,8 +33,11 @@ struct NewsListView: View {
         VStack {
             TextField("Search news", text: $query , onCommit: {
                 getNews()
-            }).padding().textFieldStyle(.roundedBorder
-            )
+            }).padding()
+                .background(Color.gray.opacity(0.2))
+                .cornerRadius(10)
+                .autocapitalization(.none)
+                .disableAutocorrection(true)
             if !message.isEmpty {
                Text(message)
             }
@@ -44,7 +47,8 @@ struct NewsListView: View {
                     Text(news.title)
                 }
             }.listStyle(PlainListStyle())
-        }.navigationBarBackButtonHidden(true)
+        }.padding()
+        .navigationBarBackButtonHidden(true)
     }
 }
 

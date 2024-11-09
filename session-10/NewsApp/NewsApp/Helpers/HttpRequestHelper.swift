@@ -43,6 +43,8 @@ class HttpRequestHelper {
     
     func POST<T: Encodable>(url: String, body: T, completion: @escaping(Bool, Data?, String?) -> Void){
         guard let url = URL(string: url) else {
+            print("Error: cannot create URL")
+            completion(false, nil, "Error: cannot create URL")
             return
         }
         
