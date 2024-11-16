@@ -37,8 +37,15 @@ class ContactListViewModel: ObservableObject {
         fetchAllContacts()
     }
     
-    f	
+    func deleteContact(contact: Contact) {
+        context.delete(contact)
+        saveContext()
+    }
     
+    func updateContact(){
+        saveContext()
+    }
+
     
     private func saveContext() {
         if context.hasChanges {

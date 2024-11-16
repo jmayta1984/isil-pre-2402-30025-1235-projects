@@ -26,7 +26,7 @@ struct ContactListView: View {
                             Text(contact.company)
                             Text(contact.phone)
                         }
-
+                        
                     }
                 }.onDelete { indexSet in
                     
