@@ -9,12 +9,14 @@ import SwiftUI
 
 struct ContactDetailView: View {
     
+    var contact: Contact?
+    
     @State var name: String = ""
     @State var company: String = ""
     @State var phone: String = ""
     @Environment(\.dismiss) var dismiss
     
-    let onAddContact: (String, String, String) -> Void
+    let saveContact: (String, String, String) -> Void
 
     var body: some View {
         VStack {
@@ -38,12 +40,20 @@ struct ContactDetailView: View {
                 .disableAutocorrection(true)
             
             Button(action: {
-                onAddContact(name, company, phone)
+                saveContact(name, company, phone)
                 dismiss()
             } ) {
-                Text("Save")
-            }.padding().buttonStyle(.borderedProminent)
-        }.padding()
+                Text("Save").frame(maxWidth: .infinity).padding()
+            }.buttonStyle(.borderedProminent)
+        }.padding().onAppear {
+            
+        
+            guard let contact = contact else { return }
+            
+            self.name = contact.name
+            self.company = contact.company
+            self.phone = contact.phone
+        }
     }
 }
 

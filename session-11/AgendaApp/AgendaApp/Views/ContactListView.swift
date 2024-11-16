@@ -14,9 +14,27 @@ struct ContactListView: View {
         NavigationStack {
             List {
                 ForEach(viewModel.contacts) { contact in
-                    Text(contact.name ?? "")
+                    
+                    NavigationLink(destination: ContactDetailView(contact: contact) { name, company, phone  in
+                        contact.name = name
+                        contact.company = company
+                        contact.phone = phone
+                        viewModel.updateContact()
+                    }){
+                        VStack (alignment: .leading){
+                            Text(contact.name)
+                            Text(contact.company)
+                            Text(contact.phone)
+                        }
+
+                    }
+                }.onDelete { indexSet in
+                    
+                    guard let index = indexSet.first else { return }
+                    viewModel.deleteContact(contact: viewModel.contacts[index])
                 }
-            }.navigationTitle("Agenda")
+            }.listStyle(PlainListStyle())
+                .navigationTitle("Agenda")
                 .toolbar {
                     ToolbarItem(placement: .topBarTrailing) {
                         NavigationLink(destination: {
