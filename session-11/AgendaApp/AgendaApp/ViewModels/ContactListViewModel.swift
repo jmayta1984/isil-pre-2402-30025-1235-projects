@@ -40,10 +40,13 @@ class ContactListViewModel: ObservableObject {
     func deleteContact(contact: Contact) {
         context.delete(contact)
         saveContext()
+        fetchAllContacts()
     }
     
     func updateContact(){
         saveContext()
+        fetchAllContacts()
+        
     }
 
     
