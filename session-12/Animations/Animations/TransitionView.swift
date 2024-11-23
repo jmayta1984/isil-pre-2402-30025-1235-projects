@@ -8,8 +8,23 @@
 import SwiftUI
 
 struct TransitionView: View {
+    @State private var showRectangle = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            if showRectangle {
+                Rectangle()
+                    .fill(Color.orange)
+                    .frame(width: 100, height: 100)
+                    .transition(.scale)
+            }
+            
+            Button("Toggle") {
+                withAnimation {
+                    showRectangle.toggle()
+                }
+            }.padding()
+        }
     }
 }
 

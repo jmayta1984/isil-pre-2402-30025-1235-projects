@@ -23,5 +23,5 @@ struct SpringAnimationView: View {
 }
 
 #Preview {
-    SprintAnimationView()
+    SpringAnimationView()
 }

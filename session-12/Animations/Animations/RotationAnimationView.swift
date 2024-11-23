@@ -8,8 +8,18 @@
 import SwiftUI
 
 struct RotationAnimationView: View {
+    @State private var rotation: Double = 0
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Rectangle()
+                .fill(Color.yellow)
+                .frame(width: 100, height: 100)
+                .rotationEffect(.degrees(rotation))
+                .animation(.linear(duration: 1.0), value: rotation)
+            Button("Rotate"){
+                rotation += 45
+            }.padding()
+        }
     }
 }
 
