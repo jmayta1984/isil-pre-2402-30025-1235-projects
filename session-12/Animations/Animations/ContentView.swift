@@ -1,8 +1,8 @@
 //
 //  ContentView.swift
-//  MovieApp
+//  Animations
 //
-//  Created by user272495 on 11/15/24.
+//  Created by user272495 on 11/22/24.
 //
 
 import SwiftUI

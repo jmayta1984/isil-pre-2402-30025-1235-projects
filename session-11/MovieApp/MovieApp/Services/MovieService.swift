@@ -9,31 +9,24 @@ import Foundation
 
 
 class MovieService {
-    
-    func getMovies(completion: @escaping ([Movie]?, String? ) -> Void) {
-        let url = "https://api.themoviedb.org/3/movie/upcoming?api_key=3cae426b920b29ed2fb1c0749f258325"
+    func getMovies(page: Int, completion: @escaping (Result<[Movie], HttpRequestError>) -> Void) {
+        let url = "\(APIConstants.baseURL)\(APIConstants.Endpoints.popularMovies)?\(APIConstants.Parameters.apiKey)=\(APIConstants.apiKey)&\(APIConstants.Parameters.page)=\(page)"
+        print(url)
         
-        HttpRequestHelper().GET(url: url) { success, data, message in
-            if (success) {
-                guard let data = data else {
-                    completion(nil, "Error: \(message ?? "no data")")
-                    return
-                }
+        HttpRequestHelper().GET(url: url) { result in
+            switch result {
+            case .success(let data):
                 do {
                     let wrapper = try JSONDecoder().decode(MovieWrapper.self, from: data)
-                    let movies = wrapper.results.map { movieResponse in
-                        Mapper.toMovie(response: movieResponse)
-                    }
-                    completion(movies, nil)
-                    
-                } catch (let error){
-                    completion(nil, "Error: \(error.localizedDescription)")
+                    completion(.success(wrapper.results.map { movieRespone in
+                        Mapper.toMovie(response: movieRespone ) }))
+                } catch {
+                    completion(.failure(.decodingError(error)))
                 }
-                
-            } else {
-                completion(nil, "Error: \(message ?? "no response")")
+            case .failure(let error):
+                completion(.failure(error))
             }
         }
-        
     }
 }
+
