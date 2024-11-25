@@ -3,20 +3,30 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 70;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9DAB18F22CF494E900FCAA8C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAB18EC2CF494E900FCAA8C /* ContentView.swift */; };
+		9DAB18F32CF494E900FCAA8C /* GoogleMapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAB18ED2CF494E900FCAA8C /* GoogleMapManager.swift */; };
+		9DAB18F42CF494E900FCAA8C /* GoogleMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAB18EE2CF494E900FCAA8C /* GoogleMapView.swift */; };
+		9DAB18F52CF494E900FCAA8C /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAB18EF2CF494E900FCAA8C /* MapView.swift */; };
+		9DAB18F62CF494E900FCAA8C /* RestaurantsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAB18F02CF494E900FCAA8C /* RestaurantsApp.swift */; };
+		9DAB18F72CF494E900FCAA8C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DAB18E92CF494E900FCAA8C /* Preview Assets.xcassets */; };
+		9DAB18F82CF494E900FCAA8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DAB18EB2CF494E900FCAA8C /* Assets.xcassets */; };
 		9DBC0B852CF17B7B00AB0E50 /* GoogleMaps in Frameworks */ = {isa = PBXBuildFile; productRef = 9DBC0B842CF17B7B00AB0E50 /* GoogleMaps */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9DAB18E92CF494E900FCAA8C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9DAB18EB2CF494E900FCAA8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9DAB18EC2CF494E900FCAA8C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9DAB18ED2CF494E900FCAA8C /* GoogleMapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapManager.swift; sourceTree = "<group>"; };
+		9DAB18EE2CF494E900FCAA8C /* GoogleMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapView.swift; sourceTree = "<group>"; };
+		9DAB18EF2CF494E900FCAA8C /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		9DAB18F02CF494E900FCAA8C /* RestaurantsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsApp.swift; sourceTree = "<group>"; };
 		9DBC0B722CF178D900AB0E50 /* Restaurants.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Restaurants.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		9DBC0B742CF178D900AB0E50 /* Restaurants */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Restaurants; sourceTree = "<group>"; };
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		9DBC0B6F2CF178D900AB0E50 /* Frameworks */ = {
@@ -30,10 +40,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9DAB18EA2CF494E900FCAA8C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				9DAB18E92CF494E900FCAA8C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9DAB18F12CF494E900FCAA8C /* Restaurants */ = {
+			isa = PBXGroup;
+			children = (
+				9DAB18EA2CF494E900FCAA8C /* Preview Content */,
+				9DAB18EB2CF494E900FCAA8C /* Assets.xcassets */,
+				9DAB18EC2CF494E900FCAA8C /* ContentView.swift */,
+				9DAB18ED2CF494E900FCAA8C /* GoogleMapManager.swift */,
+				9DAB18EE2CF494E900FCAA8C /* GoogleMapView.swift */,
+				9DAB18EF2CF494E900FCAA8C /* MapView.swift */,
+				9DAB18F02CF494E900FCAA8C /* RestaurantsApp.swift */,
+			);
+			path = Restaurants;
+			sourceTree = "<group>";
+		};
 		9DBC0B692CF178D900AB0E50 = {
 			isa = PBXGroup;
 			children = (
-				9DBC0B742CF178D900AB0E50 /* Restaurants */,
+				9DAB18F12CF494E900FCAA8C /* Restaurants */,
 				9DBC0B732CF178D900AB0E50 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,9 +93,6 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				9DBC0B742CF178D900AB0E50 /* Restaurants */,
-			);
 			name = Restaurants;
 			packageProductDependencies = (
 				9DBC0B842CF17B7B00AB0E50 /* GoogleMaps */,
@@ -88,7 +117,7 @@
 				};
 			};
 			buildConfigurationList = 9DBC0B6D2CF178D900AB0E50 /* Build configuration list for PBXProject "Restaurants" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -96,7 +125,6 @@
 				Base,
 			);
 			mainGroup = 9DBC0B692CF178D900AB0E50;
-			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				9DBC0B832CF17B7B00AB0E50 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */,
 			);
@@ -114,6 +142,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DAB18F72CF494E900FCAA8C /* Preview Assets.xcassets in Resources */,
+				9DAB18F82CF494E900FCAA8C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +154,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DAB18F22CF494E900FCAA8C /* ContentView.swift in Sources */,
+				9DAB18F32CF494E900FCAA8C /* GoogleMapManager.swift in Sources */,
+				9DAB18F42CF494E900FCAA8C /* GoogleMapView.swift in Sources */,
+				9DAB18F52CF494E900FCAA8C /* MapView.swift in Sources */,
+				9DAB18F62CF494E900FCAA8C /* RestaurantsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,7 +299,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -293,7 +328,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
