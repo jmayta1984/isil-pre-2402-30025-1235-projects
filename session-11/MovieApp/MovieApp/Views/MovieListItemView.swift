@@ -18,7 +18,7 @@ struct MovieListItemView: View {
                     image
                         .resizable()
                         .aspectRatio(contentMode: .fill)
-                        .frame(width: 90, height: 90)
+                        .frame(width: 90, height: 135)
                         .clipShape(RoundedRectangle(cornerRadius: 5))
                 },
                 placeholder: {
@@ -30,11 +30,20 @@ struct MovieListItemView: View {
                     }
                 }
             )
+            VStack (alignment: .leading){
+                
+                Text(movie.title)
+                    .bold()
+                    .font(.body)
+                    .foregroundStyle(Color.orange)
+                    .lineLimit(1)
+                    .truncationMode(.tail)
+                    .padding(.top)
+                Text(movie.overview).font(.caption).lineLimit(2)                    .truncationMode(.tail)
+                Spacer()
+
+            }
             
-            Text(movie.title)
-                .font(.body)
-                .lineLimit(1)
-                .truncationMode(.tail)
             
         }
     }

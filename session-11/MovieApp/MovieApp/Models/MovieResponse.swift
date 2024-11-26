@@ -15,6 +15,7 @@ struct MovieResponse: Decodable {
     let posterPath: String
     let releaseDate: String
     let voteAverage: Double
+    let overview: String
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -22,5 +23,6 @@ struct MovieResponse: Decodable {
         case posterPath = "poster_path"
         case releaseDate = "release_date"
         case voteAverage = "vote_average"
+        case overview = "overview"
     }
 }

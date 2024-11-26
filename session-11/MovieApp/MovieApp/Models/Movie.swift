@@ -11,4 +11,5 @@ struct Movie: Identifiable, Equatable {
     let posterPath: String
     let releaseDate: String
     let voteAverage: Double
+    let overview: String
 }

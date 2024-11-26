@@ -36,7 +36,6 @@ struct MovieListView: View {
                 }
                 .animation(.easeInOut, value: viewModel.movies)
                 .listStyle(PlainListStyle())
-                .navigationTitle("Películas")
             }
         }
     }
