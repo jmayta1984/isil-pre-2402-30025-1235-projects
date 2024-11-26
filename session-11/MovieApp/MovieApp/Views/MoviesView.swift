@@ -40,7 +40,7 @@ struct MoviesView: View {
                
                 MovieListView()
             }
-            .navigationTitle("Popular")
+            .navigationTitle(index.rawValue)
             
             
             
