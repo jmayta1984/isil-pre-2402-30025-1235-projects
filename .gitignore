@@ -1,0 +1,15 @@
+# Archivos del sistema
+.DS_Store
+
+# Archivos de usuario de Xcode
+xcuserdata/
+*.xcuserstate
+
+# Directorios de compilación
+DerivedData/
+build/
+
+# Otros archivos temporales
+*.xcworkspace
+
+session-15/Notifications/Notifications.xcodeproj/project.xcworkspace/xcuserdata/user272495.xcuserdatad/UserInterfaceState.xcuserstate
