@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MoviesView: View {
     @State private var search = ""
-    @State private var index = Sections.popular
+    @StateObject var viewModel = MovieListViewModel()
     
     init() {
         // Large Navigation Title
@@ -27,20 +27,24 @@ struct MoviesView: View {
                 }.padding()
                 ScrollView(.horizontal, showsIndicators: false){
                     LazyHStack {
-                        ForEach(Sections.allCases, id: \.self) { section in
-                            Text(section.rawValue)
-                                .font(.subheadline)
-                                .foregroundStyle((index == section) ? Color.orange : Color.white )
-                                .padding([.leading, .trailing]).onTapGesture {
-                                    index = section
-                                }
+                        ForEach(APIEndpoint.allCases, id: \.self) { endpoint in
+                            ZStack {
+                                
+                                Text(endpoint.displayName)
+                                    .font(.subheadline)
+                                    .foregroundStyle((viewModel.endpoint == endpoint) ? Color.orange : Color.white )
+                                    .padding([.leading, .trailing]).onTapGesture {
+                                        viewModel.updateEndpoint(endpoint: endpoint)
+                                    }
+                            }
+                            
                         }
                     }.fixedSize()
                 }
                
-                MovieListView()
+                MovieListView(viewModel: viewModel)
             }
-            .navigationTitle(index.rawValue)
+            .navigationTitle(viewModel.endpoint.displayName)
             
             
             

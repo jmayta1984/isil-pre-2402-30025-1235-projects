@@ -9,8 +9,8 @@ import Foundation
 
 
 class MovieService {
-    func getMovies(page: Int, completion: @escaping (Result<[Movie], HttpRequestError>) -> Void) {
-        let url = "\(APIConstants.baseURL)\(APIConstants.Endpoints.popularMovies)?\(APIConstants.Parameters.apiKey)=\(APIConstants.apiKey)&\(APIConstants.Parameters.page)=\(page)"
+    func getMovies(endpoint: String, page: Int, completion: @escaping (Result<[Movie], HttpRequestError>) -> Void) {
+        let url = "\(APIConstants.baseURL)\(endpoint)?\(APIConstants.Parameters.apiKey)=\(APIConstants.apiKey)&\(APIConstants.Parameters.page)=\(page)"
         print(url)
         
         HttpRequestHelper().GET(url: url) { result in

@@ -13,17 +13,29 @@ class MovieListViewModel: ObservableObject {
     @Published var isLoading: Bool = false
     @Published var isLoadingMore: Bool = false // Indica si se están cargando más películas
     
+    @Published var endpoint = APIEndpoint.popular
+
+    
     private let movieService = MovieService()
     private var currentPage = 1
     private let resultsPerPage = 20 // Número de resultados por página
     private var isLastPage = false // Indica si ya se alcanzó la última página
     
-    init() {
-        getMovies()
-    }
+ 
     
     var hasMoreMovies: Bool {
         !isLastPage
+    }
+    
+    func updateEndpoint(endpoint: APIEndpoint){
+        self.endpoint = endpoint
+        self.movies = []
+        self.errorMessage = nil
+        self.isLoading = false
+        self.isLoadingMore = false
+        self.currentPage = 1
+        getMovies()
+        
     }
     
     func getMovies() {
@@ -31,7 +43,7 @@ class MovieListViewModel: ObservableObject {
         isLoading = true
         errorMessage = nil
         
-        movieService.getMovies(page: currentPage) { result in
+        movieService.getMovies(endpoint: endpoint.rawValue, page: currentPage) { result in
             DispatchQueue.main.async {
                 self.isLoading = false
                 
@@ -50,7 +62,7 @@ class MovieListViewModel: ObservableObject {
         guard !isLoadingMore, !isLastPage else { return } // No cargar más si ya es la última página
         isLoadingMore = true
         
-        movieService.getMovies(page: currentPage + 1) { result in
+        movieService.getMovies(endpoint: endpoint.rawValue, page: currentPage + 1) { result in
             DispatchQueue.main.async {
                 self.isLoadingMore = false
                 

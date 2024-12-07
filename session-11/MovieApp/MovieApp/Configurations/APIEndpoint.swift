@@ -7,9 +7,9 @@
 
 import Foundation
 
-enum MovieAPIEndpoint: String, CaseIterable {
-    case topRated = "/movie/top_rated"
+enum APIEndpoint: String, CaseIterable {
     case popular = "/movie/popular"
+    case topRated = "/movie/top_rated"
     case upcoming = "/movie/upcoming"
     case nowPlaying = "/movie/now_playing"
     

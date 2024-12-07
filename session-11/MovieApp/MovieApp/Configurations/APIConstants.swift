@@ -15,16 +15,6 @@ struct APIConstants {
     //static let apiKey = "YOUR_API_KEY_HERE"
     static let apiKey = "3cae426b920b29ed2fb1c0749f258325"
 
-
-    // Endpoints específicos
-    struct Endpoints {
-        static let upcomingMovies = "/movie/upcoming"
-        static let popularMovies = "/movie/popular"
-        static let topRatedMovies = "/movie/top_rated"
-        static let nowPlayingMovies = "/movie/now_playing"
-
-    }
-    
     // Parámetros comunes
     struct Parameters {
         static let apiKey = "api_key"
