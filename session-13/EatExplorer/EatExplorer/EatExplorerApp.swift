@@ -13,7 +13,7 @@ struct EatExplorerApp: App {
     
     var body: some Scene {
         WindowGroup {
-            RestaurantListView()
+            HomeView()
         }
     }
 }

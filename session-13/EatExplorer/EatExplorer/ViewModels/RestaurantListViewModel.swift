@@ -25,9 +25,7 @@ class RestaurantListViewModel: ObservableObject {
         }
     }
     
-    func add(restaurant: Restaurant) {
-        RestaurantDAO().insert(restaurant: restaurant)
-    }
+  
     
 }
 

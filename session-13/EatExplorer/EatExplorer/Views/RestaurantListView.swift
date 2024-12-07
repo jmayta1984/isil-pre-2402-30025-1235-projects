@@ -26,9 +26,7 @@ struct RestaurantListView: View {
                 List {
                     ForEach(viewModel.restaurants ) { restaurant in
                         NavigationLink(destination: {
-                            RestaurantDetailView(restaurant: restaurant) {
-                                self.viewModel.add(restaurant: restaurant)
-                            }
+                            RestaurantDetailView(restaurant: restaurant)
                         }) {
                             RestaurantListItemView(restaurant: restaurant)
 
